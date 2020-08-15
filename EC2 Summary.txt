@@ -1,0 +1,31 @@
+EC2 is a web service that provides resizeable compute capacity in the cloud
+
+4 pricing options:
+
+1. On Demand - fixed rate by the hour with no commitment
+
+2. Reserved - Contract terms 1 year to 3 years, more upfront payment, more discount
+
+3. Spot - Bid whatever price you want for instance capacity
+
+4. Dedicated - Physical EC2 server dedicated for your use, mainly used where lot of server-bound licenses exist
+
+If spot instance is terminated by EC2, you will not be charged for partial hour of usage. However, if you terminate instance yourself, you will be charged for any hour in which the instance ran.
+
+types:
+
+F - FPGA
+I - IOPS
+G - Graphics
+H - High Disk Throughput
+T - Cheap general purpose(T2 Micro, T3 Micro)
+D - Density
+R - RAM
+M - Main choice for general purpose
+C - Compute
+P - Graphics(think Pics)
+X - Xtreme Memory
+Z - Extreme memory and Gpu
+A - ARM based workloads
+U - Bare Metal
+
