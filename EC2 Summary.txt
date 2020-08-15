@@ -29,3 +29,25 @@ Z - Extreme memory and Gpu
 A - ARM based workloads
 U - Bare Metal
 
+Termination protection is turned OFF by default
+
+On EBS backed instance, default action is for root EBS volume to be deleted when the instance is terminated 
+
+EBS root volumes for default AMI can now be encryped when creating instance 
+
+All inbound traffic is blocked by default
+
+All outbound traffic is allowed
+
+You can have multiple security groups attached to EC2 instance
+
+Security groups are stateful - when you open port 80, it will be open for inbound as well as outbound
+
+Network ACL are stateless
+
+You cannot block specific IP addresses using security groups, instead use NACL
+
+You can specify allow rules but not deny rules
+
+Snapshots are incremental - only blocks that have changed since your last snapshot move to S3
+
