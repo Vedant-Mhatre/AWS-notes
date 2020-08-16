@@ -51,3 +51,14 @@ You can specify allow rules but not deny rules
 
 Snapshots are incremental - only blocks that have changed since your last snapshot move to S3
 
+You can create AMIs from both Volumes and Snapshots
+
+You can change EBS volume size on the fly, including changing storage type and size
+
+Volumes will be always be in the same AZ as EC2 instance
+
+To move EC2 volume from one AZ to another, take snapshot of it, create AMI from it then use that AMI to launch instance in new AZ
+
+To move EC2 volume from one region to another:
+take snapshot of it, create AMI and copy AMI to a different region. Then use copied AMI to launch EC2 instance
+
