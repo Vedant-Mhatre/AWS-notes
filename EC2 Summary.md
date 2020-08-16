@@ -135,4 +135,20 @@ Amazon FSx for lustre: high speed, high capacity distributed storage. This will 
 
 EC2 placement groups:
 
-1. CLustered Placement Group: Low network latency/high network throughput
+1. CLustered Placement Group: Low network latency/high network throughput, same AZ
+
+2. Spread Placement Group: Individual Critical EC2 instances, each have separate hardware
+
+3. Partitioned: For Multiple EC2 instances for HBase, HDFS and Cassandra
+
+AWS recomments homogeneous instances within clustered placement groups
+
+YOu cant merge placement groups
+
+YOu cant move existing instance into placement group, create AMI from existing instance and launch new instance from AMI into placement group
+
+How to block malicious IP:
+
+1. AWS WAF
+
+2. NACLs
