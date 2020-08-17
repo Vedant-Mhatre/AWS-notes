@@ -23,3 +23,19 @@ DynamoDB(NOSQL)
 
 RedShift(OLAP)
 
+
+RDS:
+
+RDS runs on virtual machines
+
+You cannot login to these virtual machines
+
+RDS is not serverless, exception: Aurora Serverless
+
+2 different types of backups for RDS:
+
+1. Automated Backups:recover db to any point in time within a "retention period"(can be between one to 35 days).
+Enabled by default, backup is stored in S3 and you get free storage space equal to the size of db
+
+2. Database Snapshots
+
