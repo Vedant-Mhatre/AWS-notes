@@ -34,11 +34,13 @@ RDS is not serverless, exception: Aurora Serverless
 
 2 different types of backups for RDS:
 
-1. Automated Backups:recover db to any point in time within a "retention period"(can be between one to 35 days).
+1. Automated Backups:
+recover db to any point in time within a "retention period"(can be between one to 35 days).
 Enabled by default, backup is stored in S3 and you get free storage space equal to the size of db.
 During backup you may experience elevated latency
 
-2. Database Snapshots: are done manually. Stored even after you delete RDS instance, unlike automated backups.
+2. Database Snapshots:
+are done manually. Stored even after you delete RDS instance, unlike automated backups.
 
 Whenver you restore either an automatic backup or manual snapshot, restored version of database will be new RDS instance with a new DNS endpoint.
 
@@ -76,4 +78,46 @@ You can create read replicas of multi AZ database
 Read replicas acn be promoted to be their own databases. This breaks the replication
 
 You can have read replica in second region
+
+DynamoDB:
+fully managed NoSQL db
+supports both document and key value data models
+stored on SSD
+spread across 3 geographically separate data centres
+Eventual consistent reads (default)
+alternate option:
+strongly consistent reads
+
+eventual consistent read:
+consistency across all copies of data is usually reached within 1 second. Repeating read after short time should return uploaded data(best read performance)
+
+strongly consistent read:
+returns result that reflects all writes that received a successful response prior to read
+
+application needs to read that update within 1 second or less then use strongly consistent read
+
+
+Redshift:
+fully managed petabyte scale data warehouse service
+can be configured as follows:
+Single node(160 GB)
+OR
+Multi-node
+  Leader node (manages client connections and receives queries)
+  Compute nodes(store data and perform queries and computations).upto 128 nodes possible
+  
+Advanced compression:
+Compresses columns instead of rows
+Automatically samples data and selects best compression scheme
+
+MAssive parallel processing:
+automatically distribute data and query across all nodes
+
+Backups: enabled by default
+max retention 35 days
+Redshift Always attempts to maintain atleast 3 copies of your data(original and replica on compute nodes and a backup on S3)
+
+Can also asynchornously replicate your snapshots to S3 in another region for disaster recovery
+
+PRiced acrossed compute node hours. Not charged on leader node hours, only compute node hours will incur charges
 
