@@ -129,3 +129,14 @@ can restore snapshots to new AZs in event of an outage
 
 backups is enabled by default with a 1 day retention period
 
+Aurora:
+1. Starts with 10 GB storage, scales in 10GB increments to 64TB (storage autoscaling)
+2. Compute resources can scale upto 32vCPUs
+3. 2 copies of data is contained in each AZ, with minumum of 3 availability zones. 6 copies of your data.
+
+Automated backups are always enabled, they do not impact db performance
+
+you can also take snapshots, they wont impact performance
+
+you can share snapshots with other aws accounts
+
