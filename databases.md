@@ -119,5 +119,13 @@ Redshift Always attempts to maintain atleast 3 copies of your data(original and 
 
 Can also asynchornously replicate your snapshots to S3 in another region for disaster recovery
 
-PRiced acrossed compute node hours. Not charged on leader node hours, only compute node hours will incur charges
+Priced acrossed compute node hours. Not charged on leader node hours, only compute node hours will incur charges
+
+Also charged for backups and data transfer(only within VPC)
+
+currently available in only 1 AZ
+
+can restore snapshots to new AZs in event of an outage
+
+backups is enabled by default with a 1 day retention period
 
