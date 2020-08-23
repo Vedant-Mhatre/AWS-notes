@@ -144,3 +144,14 @@ AUrora serverless DB cluster automatically starts up, shuts down and scales capa
 
 - cost effective option for infrequent, intermittent or unpredictable workloads
 
+Elasticache:
+2 options:
+1. Memcached
+2. Redis
+
+If you want really simple cache to offload database go with memcached, its able to scale horizontally and and has multi threaded performance
+
+If you are going to need advanced data types or ranking/sorting datas or pub/sub capabilities, multi AZ etc then go with Redis
+
+imp - Redis is multi AZ, you can do backups and restores of redis
+
