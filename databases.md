@@ -140,3 +140,7 @@ you can also take snapshots, they wont impact performance
 
 you can share snapshots with other aws accounts
 
+AUrora serverless DB cluster automatically starts up, shuts down and scales capacity up or down according to needs
+
+- cost effective option for infrequent, intermittent or unpredictable workloads
+
