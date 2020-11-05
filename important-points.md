@@ -38,8 +38,10 @@ When combined with the monitoring features of Amazon CloudWatch Events and AWS C
 
 * AWS Data Pipeline is a web service that helps you reliably process and move data between different AWS compute and storage services, as well as on-premises data sources, at specified intervals
 
-#### 
-* 
+#### S3:
+* Using the Range HTTP header in a GET Object request, you can fetch a byte-range
+from an object, transferring only the specified portion. You can use concurrent
+connections to Amazon S3 to fetch different byte ranges from within the same object.
 
 #### 
 * 
