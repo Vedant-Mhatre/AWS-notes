@@ -29,6 +29,15 @@ When combined with the monitoring features of Amazon CloudWatch Events and AWS C
 
 #### [Controlling which Auto Scaling instances terminate during scale in](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html)
 
+#### If data stored in S3 is to be analysed:
+* Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run
+
+* Amazon RedShift is used for analytics but cannot analyze data in S3
+
+* AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics. It is not used for analyzing data in S3
+
+* AWS Data Pipeline is a web service that helps you reliably process and move data between different AWS compute and storage services, as well as on-premises data sources, at specified intervals
+
 #### 
 * 
 
