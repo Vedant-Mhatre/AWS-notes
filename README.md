@@ -1,5 +1,10 @@
 # AWS-SAA-C02-notes
-Personal notes created during preparing for exam
+
+This repo contains notes I created while preparing for exam
+
+I passed by exam using this notes, certificate: [Certificate Link](https://drive.google.com/file/d/1HMEsZKvLRw0NlBsfSMJhIfr7q3yiM5Sf/view)
+
+I will be continously updating and adding important points in this repository, star this repo to get notifications for the same.
 
 Most of the notes are from this awesome [course](https://acloud.guru/learn/aws-certified-solutions-architect-associate) by A Cloud Guru
 
