@@ -10,5 +10,5 @@ Most of the notes are from this awesome [course](https://acloud.guru/learn/aws-c
 
 Others have been taken from various sources like documentation, whitepapers, etc.
 
-If you found these notes helpful also checkout my other notes repository:
+If you found these notes helpful also checkout my terraform repository to learn Infrastructure as Code through hands-on examples:
 * [AWS-Terraform-Examples](https://github.com/Vedant-Mhatre/AWS-Terraform-Examples)
