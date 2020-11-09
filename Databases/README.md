@@ -12,7 +12,7 @@ Has 2 key features:
 
 * Data warehousing databases use different type of architecture both from database perspective and infrastructure layer
 ### 
-* 
+
 ### ElastiCache:
 
 * webservice that makes it easy to deploy, operate, and scale an in-memory cache in the cloud. 
@@ -23,14 +23,14 @@ Two open source in-memory caching engines:
 
 * Redis
 
-
+***
 RDS (OLTP):
 SQL, MySQl, PostgreSQL, Oracle, Aurora, MariaDB
 
 DynamoDB(NoSQL)
 
 RedShift(OLAP)
-
+***
 
 ### RDS:
 
@@ -50,14 +50,16 @@ During backup you may experience elevated latency
 * Database Snapshots:
 are done manually. Stored even after you delete RDS instance, unlike automated backups.
 
-* Whenver you restore either an automatic backup or manual snapshot, restored version of database will be new RDS instance with a new DNS endpoint.
+Whenver you restore either an automatic backup or manual snapshot, restored version of database will be new RDS instance with a new DNS endpoint.
 
-* Encryption at rest is supported for MySQl, Oracle, SQL Server, PostgresSQL, MariaDB and Aurora, it is done using AWS key management service(KMS) service.
+Encryption at rest is supported for MySQl, Oracle, SQL Server, PostgresSQL, MariaDB and Aurora, it is done using AWS key management service(KMS) service.
 Once RDS instance is encrypted automated backups, read replicas and snapshots are also encrypted.
 
-* Multi AZ: allows you to have an exact copy of your production database in another AZ. When anything is written in production database, it is automatically synchorized to stand by database.
+#### Multi AZ:
 
-* In event of primary db failure, AWS will automatically failover to the standby so that db operations can resume quickly without administrative intervention.
+allows you to have an exact copy of your production database in another AZ. When anything is written in production database, it is automatically synchorized to stand by database.
+
+In event of primary db failure, AWS will automatically failover to the standby so that db operations can resume quickly without administrative intervention.
 
 ***
 #### Multi AZ is for disaster recovery only.
@@ -119,7 +121,7 @@ Advanced compression:
 * Compresses columns instead of rows
 * Automatically samples data and selects best compression scheme
 
-MAssive parallel processing:
+Massive parallel processing:
 * automatically distribute data and query across all nodes
 
 Backups:
@@ -128,40 +130,40 @@ Backups:
 * Redshift Always attempts to maintain atleast 3 copies of your data(original and replica on compute nodes and a backup on S3)
 
 
-* Can also asynchornously replicate your snapshots to S3 in another region for disaster recovery
+Can also asynchornously replicate your snapshots to S3 in another region for disaster recovery
 
-* Priced acrossed compute node hours. Not charged on leader node hours, only compute node hours will incur charges
+Priced acrossed compute node hours. Not charged on leader node hours, only compute node hours will incur charges
 
-* Also charged for backups and data transfer(only within VPC)
+Also charged for backups and data transfer(only within VPC)
 
-* currently available in only 1 AZ
+currently available in only 1 AZ
 
 can restore snapshots to new AZs in event of an outage
 
 backups is enabled by default with a 1 day retention period
 
 ### Aurora:
-1. Starts with 10 GB storage, scales in 10GB increments to 64TB (storage autoscaling)
-2. Compute resources can scale upto 32vCPUs
-3. 2 copies of data is contained in each AZ, with minumum of 3 availability zones. 6 copies of your data.
+* Starts with 10 GB storage, scales in 10GB increments to 64TB (storage autoscaling)
+* Compute resources can scale upto 32vCPUs
+* 2 copies of data is contained in each AZ, with minumum of 3 availability zones. 6 copies of your data.
 
-Automated backups are always enabled, they do not impact db performance
+* Automated backups are always enabled, they do not impact db performance
 
-you can also take snapshots, they wont impact performance
+* you can also take snapshots, they wont impact performance
 
-you can share snapshots with other aws accounts
+* you can share snapshots with other aws accounts
 
-AUrora serverless DB cluster automatically starts up, shuts down and scales capacity up or down according to needs
+* Aurora serverless DB cluster automatically starts up, shuts down and scales capacity up or down according to needs
 
 - cost effective option for infrequent, intermittent or unpredictable workloads
 
 ### Elasticache:
-2 options:
-1. Memcached
-2. Redis
+Two options:
+* Memcached
+* Redis
 
-If you want really simple cache to offload database go with memcached, its able to scale horizontally and and has multi threaded performance
+####  If you want really simple cache to offload database go with memcached, its able to scale horizontally and and has multi threaded performance
 
-If you are going to need advanced data types or ranking/sorting datas or pub/sub capabilities, multi AZ etc then go with Redis
+####  If you are going to need advanced data types or ranking/sorting datas or pub/sub capabilities, multi AZ etc then go with Redis
 
 ####  Redis is multi AZ, you can do backups and restores of redis
