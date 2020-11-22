@@ -22,7 +22,7 @@ When combined with the monitoring features of Amazon CloudWatch Events and AWS C
 
 #### Shared Responsibility Model
 
-<img src="/awssharedrespmodel.jpg">
+<img src="awssharedrespmodel.jpg">
 
 #### To ensure that the incoming traffic to the host instances of an ECS cluster is from an ALB only:
 * Modify the security group used by the EC2 cluster to allow incoming traffic from the security group used by the ALB only.
@@ -42,9 +42,3 @@ When combined with the monitoring features of Amazon CloudWatch Events and AWS C
 * Using the Range HTTP header in a GET Object request, you can fetch a byte-range
 from an object, transferring only the specified portion. You can use concurrent
 connections to Amazon S3 to fetch different byte ranges from within the same object.
-
-#### 
-* 
-
-#### 
-* 
