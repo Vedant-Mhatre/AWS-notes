@@ -1,8 +1,8 @@
-# AWS-SAA-C02-notes
+# AWS-notes
 
 This repo contains notes I created while preparing for exam
 
-I passed my exam using these notes, certificate: [Certificate Link](https://drive.google.com/file/d/1HMEsZKvLRw0NlBsfSMJhIfr7q3yiM5Sf/view)
+I passed AWS SAA C02 exam using these notes, certificate: [Certificate Link](https://drive.google.com/file/d/1HMEsZKvLRw0NlBsfSMJhIfr7q3yiM5Sf/view)
 
 I will be continously updating and adding important points in this repository, watch this repo to get notifications for the same, star the repo if you find it useful.
 
